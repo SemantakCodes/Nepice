@@ -44,6 +44,14 @@
   --surface-color: #ffffff;
 }
 
+.red-background {
+  --background-color: #3550ff;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #272f64;
+  --contrast-color: #ffffff;
+}
+
 .dark-background {
   --background-color: #2a2c39;
   --default-color: #ffffff;
@@ -143,8 +151,8 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(255, 255, 255, 0);
-  --heading-color: #ffffff;
+  --background-color: rgba(207, 0, 0, 0);
+  --heading-color: #ffa238;
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 20px 0;
