@@ -22,7 +22,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #2a2c39; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ef6603; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #FF4D4D; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -30,11 +30,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ef6603; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color:#FF4D4D; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #060606; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ef6603; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #FF4D4D; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -45,11 +45,11 @@
 }
 
 .red-background {
-  --background-color: #3550ff;
+  --background-color: #0A2540;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #272f64;
-  --contrast-color: #ffffff;
+  --surface-color: #0b55f4;
+  --contrast-color: #ceefff;
 }
 
 .dark-background {
@@ -68,6 +68,73 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
+/* Fullscreen Invisible Touch Areas */
+.touch-area-left, .touch-area-right {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 998;
+  background: transparent;
+}
+
+.touch-area-left {
+  left: 0;
+  cursor: pointer;
+}
+
+.touch-area-right {
+  right: 0;
+  cursor: pointer;
+}
+
+.touch-area-left:active, .touch-area-right:active {
+  background: rgba(255,255,255,0.05);
+  transition: background 0.3s ease;
+}
+
+/* Hero Waves Fix */
+.hero-waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 997;
+  color: #0b55f4;
+}
+
+/* Carousel Container Styling */
+.carousel-container {
+  text-align: center;
+  padding: 60px 15px;
+  color: #fff;
+}
+
+.carousel-container h2 span {
+  color:  #FF4D4D;
+}
+
+/* Button Styling */
+.btn-get-started {
+  border: 2px solid #ff7f00;
+  color: #ff7f00;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  font-weight: 500;
+}
+
+.btn-get-started:hover {
+  background: #ff7f00;
+  color: #fff;
+}
+
+/* Smooth Carousel Fading */
+.carousel-fade .carousel-item {
+  transition: opacity 1s ease-in-out;
+}
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -152,7 +219,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   --background-color: rgba(207, 0, 0, 0);
-  --heading-color: #ffa238;
+  --heading-color: #FF4D4D;
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 20px 0;

@@ -46,6 +46,29 @@
 
   });
 
+  document.addEventListener("DOMContentLoaded", function() {
+  const carouselElement = document.querySelector('#hero-carousel');
+  const carousel = new bootstrap.Carousel(carouselElement, {
+    interval: 10000, // Auto-slide every 10 seconds
+    ride: 'carousel',
+    pause: false,
+    wrap: true
+  });
+
+  // Touch navigation
+  const leftArea = document.querySelector('.touch-area-left');
+  const rightArea = document.querySelector('.touch-area-right');
+
+  leftArea.addEventListener('click', function() {
+    carousel.prev();
+  });
+
+  rightArea.addEventListener('click', function() {
+    carousel.next();
+  });
+});
+
+
   /**
    * Toggle mobile nav dropdowns
    */
